@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>王广明的个人博客</title>
+  
+  <subtitle>从事C++、iOS开发；一个脱离了低级趣味的人</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-02-16T10:26:22.825Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>王广明</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>老王杂货铺上线啦</title>
+    <link href="http://yoursite.com/2020/02/16/%E8%80%81%E7%8E%8B%E6%9D%82%E8%B4%A7%E9%93%BA%E4%B8%8A%E7%BA%BF%E5%95%A6/"/>
+    <id>http://yoursite.com/2020/02/16/%E8%80%81%E7%8E%8B%E6%9D%82%E8%B4%A7%E9%93%BA%E4%B8%8A%E7%BA%BF%E5%95%A6/</id>
+    <published>2020-02-16T05:00:25.000Z</published>
+    <updated>2020-02-16T10:26:22.825Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="武汉加油！中国加油"><a href="#武汉加油！中国加油" class="headerlink" title="武汉加油！中国加油!"></a>武汉加油！中国加油!</h2><h4 id="哈哈"><a href="#哈哈" class="headerlink" title="哈哈!"></a>哈哈!</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;武汉加油！中国加油&quot;&gt;&lt;a href=&quot;#武汉加油！中国加油&quot; class=&quot;headerlink&quot; title=&quot;武汉加油！中国加油!&quot;&gt;&lt;/a&gt;武汉加油！中国加油!&lt;/h2&gt;&lt;h4 id=&quot;哈哈&quot;&gt;&lt;a href=&quot;#哈哈&quot; class=&quot;headerlink
+      
+    
+    </summary>
+    
+    
+      <category term="杂谈" scheme="http://yoursite.com/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+      <category term="第一篇文章" scheme="http://yoursite.com/tags/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
+    
+  </entry>
+  
+</feed>
