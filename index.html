@@ -208,16 +208,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
@@ -228,20 +218,10 @@
         </li>
       
         
-        <li class="menu-item menu-item-schedule">
-          <a href="/schedule/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
-            
-            日程表
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-留言板">
           <a href="/messageboard/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-messageboard"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-comments"></i> <br />
             
             留言板
           </a>
@@ -280,7 +260,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/05/%E8%80%81%E7%8E%8B%E6%9D%82%E8%B4%A7%E9%93%BA%E4%B8%8A%E7%BA%BF%E5%95%A6/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/19/%E8%80%81%E7%8E%8B%E6%9D%82%E8%B4%A7%E9%93%BA%E4%B8%8A%E7%BA%BF%E5%95%A6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="王广明">
@@ -299,7 +279,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/03/05/%E8%80%81%E7%8E%8B%E6%9D%82%E8%B4%A7%E9%93%BA%E4%B8%8A%E7%BA%BF%E5%95%A6/" itemprop="url">老王杂货铺上线啦</a></h1>
+                <a class="post-title-link" href="/2020/03/19/%E8%80%81%E7%8E%8B%E6%9D%82%E8%B4%A7%E9%93%BA%E4%B8%8A%E7%BA%BF%E5%95%A6/" itemprop="url">老王杂货铺上线啦</a></h1>
         
 
         <div class="post-meta">
@@ -318,8 +298,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-05T15:17:42+08:00">
-                2020-03-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-19T13:41:03+08:00">
+                2020-03-19
               </time>
             
 
@@ -359,8 +339,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/03/05/%E8%80%81%E7%8E%8B%E6%9D%82%E8%B4%A7%E9%93%BA%E4%B8%8A%E7%BA%BF%E5%95%A6/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/03/05/%E8%80%81%E7%8E%8B%E6%9D%82%E8%B4%A7%E9%93%BA%E4%B8%8A%E7%BA%BF%E5%95%A6/" itemprop="commentCount"></span>
+                <a href="/2020/03/19/%E8%80%81%E7%8E%8B%E6%9D%82%E8%B4%A7%E9%93%BA%E4%B8%8A%E7%BA%BF%E5%95%A6/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/03/19/%E8%80%81%E7%8E%8B%E6%9D%82%E8%B4%A7%E9%93%BA%E4%B8%8A%E7%BA%BF%E5%95%A6/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -382,7 +362,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  326
+                  328
                 </span>
               
 
@@ -428,7 +408,7 @@
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/03/05/%E8%80%81%E7%8E%8B%E6%9D%82%E8%B4%A7%E9%93%BA%E4%B8%8A%E7%BA%BF%E5%95%A6/#more" rel="contents">
+            <a class="btn" href="/2020/03/19/%E8%80%81%E7%8E%8B%E6%9D%82%E8%B4%A7%E9%93%BA%E4%B8%8A%E7%BA%BF%E5%95%A6/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -641,7 +621,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">326</span>
+    <span title="Site words total count">328</span>
   
 </div>
 
@@ -658,6 +638,38 @@
 
 
 
+
+<!--添加网站的运行时间-->
+<span id="sitetime"> <br></span>
+<script language="javascript">
+	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000
+		var minutes = seconds * 60
+		var hours = minutes * 60
+		var days = hours * 24
+		var years = days * 365
+
+		var today = new Date()
+		var todayYear = today.getFullYear()
+		var todayMonth = today.getMonth()
+		var todayDate = today.getDate()
+		var todayHour = today.getHours()
+		var todayMinute = today.getMinutes()
+		var todaySecond = today.getSeconds()
+		var t1 = Date.UTC(2017,4,18,11,00,00)
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond)
+		var diff = t2-t1
+
+		var diffYears = Math.floor(diff/years)
+		var diffDays = Math.floor((diff/days)-diffYears*365)
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours)
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes)
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds)
+		document.getElementById("sitetime").innerHTML=" 本站已运行"+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒<br>"
+	}
+	siteTime()
+</script>
 
         
 <div class="busuanzi-count">
