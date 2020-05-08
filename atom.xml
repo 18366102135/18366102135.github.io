@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-24T09:25:56.061Z</updated>
+  <updated>2020-05-08T08:33:14.560Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>近期踩坑-qt项目windows移植至linux</title>
+    <link href="http://yoursite.com/2020/05/08/%E8%BF%91%E6%9C%9F%E8%B8%A9%E5%9D%91-qt%E9%A1%B9%E7%9B%AEwindows%E7%A7%BB%E6%A4%8D%E8%87%B3linux/"/>
+    <id>http://yoursite.com/2020/05/08/%E8%BF%91%E6%9C%9F%E8%B8%A9%E5%9D%91-qt%E9%A1%B9%E7%9B%AEwindows%E7%A7%BB%E6%A4%8D%E8%87%B3linux/</id>
+    <published>2020-05-08T07:23:26.000Z</published>
+    <updated>2020-05-08T08:33:14.560Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近将vs创建的qt项目移植至linux，移植过程简单记录一下, 环境: win7 ubuntu16.04 VS2015+qt5.9.0<br>1.多线程<br>qt是可以实现跨平台的，是可以直接编译的，但是如果使用了系统的API那就不行了，需要加上条件编译。期间有对socket进行了封装，实现了多线程，但是有一部分尤其是多线程的加锁操作并没有考虑linux，需要进行优化（技术扛把子建议我直接通过boost库实现网络封装，这样就不用考虑跨平台了，因为boost库本身就是跨平台的，但是奈何实现起来需要时间，所以直接在现有代码上修改了），整理下windows、linux下线程函数的对比：<br><img src="http://cdn.wangguangmingwgm.com/1054127-20170811160706976-1799499660.jpg" alt><br>2.编译过程<br>将vs下工程拷贝过去，删除Debug、Release、Win32、x64、.user、.sln、.filters、.vcxproj等文件，只保留.h、.cpp、.qrc、.ui和Resources目录，执行命令:  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">qmake -project QT+&#x3D;widgets  </span><br></pre></td></tr></table></figure>  <p>会生成pro文件<br>然后执行命令:  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">qmake  </span><br></pre></td></tr></table></figure>  <p>会生成makefile文件<br>然后执行命令：  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">make  </span><br></pre></td></tr></table></figure>  <p>中间有个坑，vs生成了pro文件了为什么还要在linux下重新生成呢，网上搜了下说是vs生成的pro配置文件是有问题的，虽然可以修改，但是比较麻烦，所以最好重新生成一下。<br>3.设置环境变量<br>有很多方法，有当前shell生效的，有适用于当前用户的，有适用于所有用户的，这里只写下我的配置过程：<br>修改用户主目录下的.bashrc文件  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">$ sudo gedit ~&#x2F;.bashrc  </span><br><span class="line">&#x2F;&#x2F; 文件末尾加入PATH的设置如下：  </span><br><span class="line">export PATH&#x3D;&quot;$PATH:your path1:your path2...&quot;  </span><br></pre></td></tr></table></figure>  <p>4.动态库链接配置<br>执行命令  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">sudo gedit &#x2F;etc&#x2F;ld.so.conf</span><br></pre></td></tr></table></figure>  <p>在文件中添加<br>/usr/你的路径/lib<br>加载配置  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">sudo ldconfig  </span><br></pre></td></tr></table></figure>  <p>来这记录一下，加深印象。  </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近将vs创建的qt项目移植至linux，移植过程简单记录一下, 环境: win7 ubuntu16.04 VS2015+qt5.9.0&lt;br&gt;1.多线程&lt;br&gt;qt是可以实现跨平台的，是可以直接编译的，但是如果使用了系统的API那就不行了，需要加上条件编译。期间有对soc
+      
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
+    
+    
+      <category term="qt" scheme="http://yoursite.com/tags/qt/"/>
+    
+  </entry>
+  
+  <entry>
     <title>近期踩坑------freeopcua的使用</title>
     <link href="http://yoursite.com/2020/04/24/%E8%BF%91%E6%9C%9F%E8%B8%A9%E5%9D%91-freeopcua%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>http://yoursite.com/2020/04/24/%E8%BF%91%E6%9C%9F%E8%B8%A9%E5%9D%91-freeopcua%E7%9A%84%E4%BD%BF%E7%94%A8/</id>
     <published>2020-04-24T08:08:15.000Z</published>
-    <updated>2020-04-24T09:25:56.061Z</updated>
+    <updated>2020-05-08T07:53:57.144Z</updated>
     
-    <content type="html"><![CDATA[<p>近期领导要求采集OPC服务器数据并上传至主站，要求是要实现跨平台，采集OPC数据倒并不困难，难点在如何实现跨平台上。在全球最大的“男性交友网站”github上找了一天，总算是找到了一个开源的支持跨平台的库freeopcua,接下来进入了长达一周的编译持久战，想起来就难受，中间的过程够我写几篇了。  </p><p><a href="https://github.com/FreeOpcUa" target="_blank" rel="noopener">项目地址:</a>  </p><p>我用的是C++版本，本来想用python的，顺便检测一下最近的学习成果，怕领导不同意。  </p><p>接下来整理一下期间遇到的各种问题：  </p><ol><li>由于没仔细阅读文档，导致前两天一直用的低版本boost库进行编译，总是失败，make it compile with boost &gt;= 1.66.0，我想吐槽下作者为什么不写的明显一点；  </li><li>CMake<br>执行编译过程：  <pre><code class="c">rem compiling  <span class="built_in">mkdir</span> build  cd build  cmake .. -DBOOST_ROOT=c:\boost_1_66  </code></pre>看到这儿，CMake，什么鬼，和Linux的make又有什么关系，度娘了一下，简单理解为一个跨平台的编译工具，执行CMakeLists.txt文件。安装CMake，<a href="https://blog.csdn.net/u011231598/article/details/80338941" target="_blank" rel="noopener">参考教程</a>,执行中遇到了好几个问题，首先提示找不到pthread.h文件，什么鬼，这不是Linux下边儿的文件，我用编译windows的啊，度娘说要一堆的DLL、lib,设置完依然报错，看来不是这儿的问题，搜索makelist语法，在CMakeLists.txt中添加注释发现执行find_package( Boost COMPONENTS system program_options filesystem thread date_time REQUIRED ) 失败，看来是boost库的问题，接着度娘，各种教程，然而并没有用。心灰意冷之际，发现了这个方法，SET(Boost_USE_STATIC_LIBS ON)，成功搞定！编译CMake成功了！  </li><li>vcpkg<br>利用VS2013编译源代码，又特么各种错误，在github的Issues里边儿看到有和我遇到一样问题的，经历了两天的排查最终发现是源代码的错误，那怎么办，看到作者有回复其他人使用vcpkg可以解决上述问题，看来是作者懒得改代码，推荐大家使用以前版本了。没问题，使用vcpkg接着搞，首先安装vcpkg, <a href="https://blog.csdn.net/babyzbb636/article/details/90047425" target="_blank" rel="noopener">参考此教程</a>, 中间有安装的问题，还有安装好后下载库的问题，我遇到的一个是语言包的问题，安装VSEnglish语言包就好了。心想着应该没啥事了，没想到还有个大坑等着我，在执行vcpkg install freeopcua过程中，会下载boost库，妈的，始终下载不不来，多次尝试发现被墙了，难怪，怎么办，还是度娘，发现了一个大佬搭建了国内镜像，感恩，<a href="https://github.com/JackBoos/vcpkg/tree/mirror_zhCN" target="_blank" rel="noopener">地址</a>,使用方法如下：  <pre><code class="c">克隆            git clone https:<span class="comment">//github.com/JackBoos/vcpkg   </span>切换分支        git checkout -b mirror_zhCN origin/mirror_zhCN  按正常使用下载   vcpkg install freeopcua</code></pre>至此，总算下载下来了，打开源码，果然与最新更新的代码不一致，真特么的坑！  </li></ol><p>哈哈，花费了一周的时间，真充实！</p>]]></content>
+    <content type="html"><![CDATA[<p>近期领导要求采集OPC服务器数据并上传至主站，要求是要实现跨平台，采集OPC数据倒并不困难，难点在如何实现跨平台上。在全球最大的“男性交友网站”github上找了一天，总算是找到了一个开源的支持跨平台的库freeopcua,接下来进入了长达一周的编译持久战，想起来就难受，中间的过程够我写几篇了。  </p><p><a href="https://github.com/FreeOpcUa" target="_blank" rel="noopener">项目地址:</a>  </p><p>我用的是C++版本，本来想用python的，顺便检测一下最近的学习成果，怕领导不同意。  </p><p>接下来整理一下期间遇到的各种问题：  </p><ol><li>由于没仔细阅读文档，导致前两天一直用的低版本boost库进行编译，总是失败，make it compile with boost &gt;= 1.66.0，我想吐槽下作者为什么不写的明显一点；  </li><li>CMake<br>执行编译过程：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rem compiling  </span><br><span class="line">mkdir build  </span><br><span class="line">cd build  </span><br><span class="line">cmake .. -DBOOST_ROOT&#x3D;c:\boost_1_66  </span><br></pre></td></tr></table></figure>看到这儿，CMake，什么鬼，和Linux的make又有什么关系，度娘了一下，简单理解为一个跨平台的编译工具，执行CMakeLists.txt文件。安装CMake，<a href="https://blog.csdn.net/u011231598/article/details/80338941" target="_blank" rel="noopener">参考教程</a>,执行中遇到了好几个问题，首先提示找不到pthread.h文件，什么鬼，这不是Linux下边儿的文件，我用编译windows的啊，度娘说要一堆的DLL、lib,设置完依然报错，看来不是这儿的问题，搜索makelist语法，在CMakeLists.txt中添加注释发现执行find_package( Boost COMPONENTS system program_options filesystem thread date_time REQUIRED ) 失败，看来是boost库的问题，接着度娘，各种教程，然而并没有用。心灰意冷之际，发现了这个方法，SET(Boost_USE_STATIC_LIBS ON)，成功搞定！编译CMake成功了！  </li><li>vcpkg<br>利用VS2013编译源代码，又特么各种错误，在github的Issues里边儿看到有和我遇到一样问题的，经历了两天的排查最终发现是源代码的错误，那怎么办，看到作者有回复其他人使用vcpkg可以解决上述问题，看来是作者懒得改代码，推荐大家使用以前版本了。没问题，使用vcpkg接着搞，首先安装vcpkg, <a href="https://blog.csdn.net/babyzbb636/article/details/90047425" target="_blank" rel="noopener">参考此教程</a>, 中间有安装的问题，还有安装好后下载库的问题，我遇到的一个是语言包的问题，安装VSEnglish语言包就好了。心想着应该没啥事了，没想到还有个大坑等着我，在执行vcpkg install freeopcua过程中，会下载boost库，妈的，始终下载不不来，多次尝试发现被墙了，难怪，怎么办，还是度娘，发现了一个大佬搭建了国内镜像，感恩，<a href="https://github.com/JackBoos/vcpkg/tree/mirror_zhCN" target="_blank" rel="noopener">地址</a>,使用方法如下：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">克隆            git clone https:&#x2F;&#x2F;github.com&#x2F;JackBoos&#x2F;vcpkg   </span><br><span class="line">切换分支        git checkout -b mirror_zhCN origin&#x2F;mirror_zhCN  </span><br><span class="line">按正常使用下载   vcpkg install freeopcua</span><br></pre></td></tr></table></figure>   至此，总算下载下来了，打开源码，果然与最新更新的代码不一致，真特么的坑！  </li></ol><p>哈哈，花费了一周的时间，真充实！  </p>]]></content>
     
     <summary type="html">
     
