@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-08T08:33:14.560Z</updated>
+  <updated>2020-05-09T08:44:28.073Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一千个愿意</title>
+    <link href="http://yoursite.com/2020/05/09/%E4%B8%80%E5%8D%83%E4%B8%AA%E6%84%BF%E6%84%8F/"/>
+    <id>http://yoursite.com/2020/05/09/%E4%B8%80%E5%8D%83%E4%B8%AA%E6%84%BF%E6%84%8F/</id>
+    <published>2020-05-09T08:13:27.000Z</published>
+    <updated>2020-05-09T08:44:28.073Z</updated>
+    
+    <content type="html"><![CDATA[<p>前几天看了下93年十大劲歌金曲颁奖典礼，真的是神仙打架，那个时候的歌真特么的好听，《执迷不悔》，《狂野之城》，《只想一生跟你走》，《谢谢你的爱》,《夏日倾情》都太经典了，中间看到了郑嘉颖获得了新人奖，竟然是歌手出道，只看过他演的《绝代双骄》，扮演了江玉郎，演技很厉害，搜了下他的歌曲，竟然很好听，尤其是《一千个愿意》，很甜，回忆下初中时写歌词的感觉。  </p><p>《一千个愿意》  </p><p>你的影 不爱偏 不爱倚<br>站在夕阳后的雨<br>像每些诗意总会开始<br>日落之时<br>我的心 不会休 不会止<br>偷偷走进站立之处<br>赠你一束飞溅水花<br>让我最后恋爱一次<br>我心一千个愿意<br>我知不可有下次<br>从前无法置信我会碰上小天使<br>原谅我爱上你<br>恕我现在极失仪<br>祈求没有介意<br>我太快乐不可压止<br>我心一千个愿意<br>我知不可有下次<br>凡尘俗世里会有你这个小天使<br>为了爱你到永远<br>日夜地坚持<br>完全为了你奋斗<br>我盼会得到你心意  </p><p>每当跟你相处<br>为何欲言又止<br>即使每天练习多次<br>在你不经心轻转身一刻<br>动静亦静采标致<br>这一生只要一个好开始<br>以后何惧共渡风雨<br>让每天伤心开心都一起<br>共你相依<br>…  </p><p><img src="http://cdn.wangguangmingwgm.com/39ae7dda50ee384e5a4ddffecfabdbfd.jpeg" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;前几天看了下93年十大劲歌金曲颁奖典礼，真的是神仙打架，那个时候的歌真特么的好听，《执迷不悔》，《狂野之城》，《只想一生跟你走》，《谢谢你的爱》,《夏日倾情》都太经典了，中间看到了郑嘉颖获得了新人奖，竟然是歌手出道，只看过他演的《绝代双骄》，扮演了江玉郎，演技很厉害，搜了下
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="歌曲" scheme="http://yoursite.com/tags/%E6%AD%8C%E6%9B%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>近期踩坑-qt项目windows移植至linux</title>
