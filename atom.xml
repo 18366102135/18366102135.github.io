@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-19T02:52:45.951Z</updated>
+  <updated>2020-05-19T02:58:58.908Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,13 +21,25 @@
     <link href="http://yoursite.com/2020/05/19/%E5%9D%9A%E6%8C%81%E4%B8%8B%E5%8E%BB%E5%90%A7/"/>
     <id>http://yoursite.com/2020/05/19/%E5%9D%9A%E6%8C%81%E4%B8%8B%E5%8E%BB%E5%90%A7/</id>
     <published>2020-05-19T02:52:45.000Z</published>
-    <updated>2020-05-19T02:52:45.951Z</updated>
+    <updated>2020-05-19T02:58:58.908Z</updated>
+    
+    <content type="html"><![CDATA[<p>#革命的道理都是曲折的，我愿意一直坚持下去！</p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;p&gt;#革命的道理都是曲折的，我愿意一直坚持下去！&lt;/p&gt;
+
+      
     
     </summary>
     
     
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="心情" scheme="http://yoursite.com/tags/%E5%BF%83%E6%83%85/"/>
     
   </entry>
   
