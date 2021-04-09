@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-11T08:11:09.416Z</updated>
+  <updated>2021-04-09T07:29:33.911Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>最近</title>
+    <link href="http://yoursite.com/2021/04/09/%E6%9C%80%E8%BF%91/"/>
+    <id>http://yoursite.com/2021/04/09/%E6%9C%80%E8%BF%91/</id>
+    <published>2021-04-09T06:25:08.000Z</published>
+    <updated>2021-04-09T07:29:33.911Z</updated>
+    
+    <content type="html"><![CDATA[<p>标题写的是最近，动笔的想法却已经很久了。我从来不是一个擅长表达的人，可是最近的生活真的糟糕透了。<br>自己一个人漂泊在异乡，当有些事需要做决定的时候就显得格外的落寞。我太容易敞开心扉了，受伤的总是我。<br>其实是有很多话要说的，可我就是说不出来，也不知道该和谁去倾诉，也不想把这种负能量带给别人。<br>就写这些吧，我知道那些槛儿我一个也过不去。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;标题写的是最近，动笔的想法却已经很久了。我从来不是一个擅长表达的人，可是最近的生活真的糟糕透了。&lt;br&gt;自己一个人漂泊在异乡，当有些事需要做决定的时候就显得格外的落寞。我太容易敞开心扉了，受伤的总是我。&lt;br&gt;其实是有很多话要说的，可我就是说不出来，也不知道该和谁去倾诉，也
+      
+    
+    </summary>
+    
+    
+      <category term="心情" scheme="http://yoursite.com/categories/%E5%BF%83%E6%83%85/"/>
+    
+    
+      <category term="崩溃" scheme="http://yoursite.com/tags/%E5%B4%A9%E6%BA%83/"/>
+    
+  </entry>
   
   <entry>
     <title>执迷不悔</title>
